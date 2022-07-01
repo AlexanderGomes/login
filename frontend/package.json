@@ -1,5 +1,4 @@
 {
-  "homepage": "https://login-theta-six.vercel.app",
   "name": "frontend",
   "version": "0.1.0",
   "proxy": "http://localhost:9000",
