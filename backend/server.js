@@ -6,6 +6,8 @@ const { errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
 const app = express();
 
+connectDB();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -27,7 +29,5 @@ if (process.env.NODE__ENV === 'production') {
 
   
   app.use(errorHandler);
-app.listen(port, async () => {
-  await connectDB();
-  console.log(`server on ${port}`);
-});
+
+  app.listen(port, () => console.log(`Server started on port ${port}`));
