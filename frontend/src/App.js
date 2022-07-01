@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <Router basename='/'>
       <div className='container'>
       <Header />
       <Routes>
