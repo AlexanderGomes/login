@@ -16,7 +16,7 @@ app.use("/api/goals", require("./routes/goalRoutes"));
 
 //server Frontend
 if (process.env.NODE__ENV === "production") {
-  app.use(express.static( "../frontend/build"));
+  app.use(express.static(path.join( "../frontend/build")));
 
   app.get("*", (req, res) =>
     res.sendFile(
