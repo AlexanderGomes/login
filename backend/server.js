@@ -3,7 +3,6 @@ const dotenv = require("dotenv").config();
 const port = process.env.PORT;
 const connectDB = require("./config/db");
 const { errorHandler } = require("./middleware/errorMiddleware");
-const path = require("path");
 const app = express();
 
 connectDB();
@@ -16,7 +15,7 @@ app.use("/api/goals", require("./routes/goalRoutes"));
 
 //server Frontend
 if (process.env.NODE__ENV === "production") {
-  app.use(express.static(path.join( "../frontend/build")));
+  app.use(express.static( "../frontend/build"));
 
   app.get("*", (req, res) =>
     res.sendFile(
