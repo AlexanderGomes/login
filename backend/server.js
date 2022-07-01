@@ -3,10 +3,10 @@ const dotenv = require("dotenv").config();
 const connectDB = require("./config/db");
 const { errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
-const app = express();
 const port = process.env.PORT;
 
 connectDB();
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
