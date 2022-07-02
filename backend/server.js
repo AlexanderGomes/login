@@ -3,7 +3,7 @@ const dotenv = require("dotenv").config();
 const connectDB = require("./config/db");
 const { errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
-const port = process.env.PORT;
+const port = process.env.PORT || 3940;
 
 connectDB();
 const app = express();
@@ -18,7 +18,7 @@ app.use("/api/goals", require("./routes/goalRoutes"));
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-  app.get('/*', (req, res) =>
+  app.get('*', (req, res) =>
     res.sendFile(
       path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
     )
