@@ -44,7 +44,6 @@ function Dashboard() {
       <section className='heading'>
         <h1>Welcome {user && user.name}</h1>
         <p>Nobody will know what you said 🤫</p>
-         <p>hello </p>
       </section>
 
       <GoalForm />
