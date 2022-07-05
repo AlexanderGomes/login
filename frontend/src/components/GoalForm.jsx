@@ -18,7 +18,7 @@ function GoalForm() {
     <section className='form'>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
-          <label htmlFor='text'>what's on your mind ? share with your other people</label>
+          <label htmlFor='text'> what's on your mind ? share with your other people</label>
           <input
             type='text'
             name='text'

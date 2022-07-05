@@ -17,6 +17,7 @@ const AllGoals = () => {
       });
   }, [setPosts]);
 
+  
   return (
     <div>
       <section className="dash__allGoals">
